@@ -437,7 +437,6 @@ Tower:
 #                                    \___|_|_\___|_||_\__|\___\___/_||_\__|_| \___/_|                                 #
 #                                                                                                                     #
 # ------------------------------------------------------------------------------------------------------------------- #
-
 # This gives you full control over the clients who can join
 # ------------------------------------------------------------------------------------------------------------------- #
 # WARNING: DO _NOT_ ENABLE THIS IF YOU DID NOT CONFIGURE IT PROPERLY !
@@ -447,7 +446,7 @@ ClientControl:
    # Also has a TS3 module for easier communication, just like LabyMod
    5zig:
       # Do you want to enable the 5zig-Control
-      enabled: false
+      enabled: true
       # This mod provides a method to disable parts of it.
       # Set the corresponding value to true if you want to block a part of the mod
       disable:
@@ -467,7 +466,7 @@ ClientControl:
          # an unfair advantage
          entity_health_indicator: true
          # A feature of 5zig to automatically reconnect to a server
-         auto_reconnect: false
+         auto_reconnect: true
       commands_on_detection:
          - "aacstaffnotify {player} in {world} uses 5zig"
 
@@ -485,14 +484,14 @@ ClientControl:
    Forge:
       # Do you want to enable the Forge-Control
       # This cannot be blocked; I recommend to kick if desired
-      enabled: false
+      enabled: true
       commands_on_detection:
          - "aacstaffnotify {player} in {world} uses Forge"
 
    # A very popular PvP modification similar to 5zig but with more features and TS3 support
    LabyMod:
       # Do you want to enable the LabyMod-Control
-      enabled: false
+      enabled: true
       # This mod provides a method to disable parts of it.
       # Set the corresponding value to true if you want to block a part of the mod
       disable:
@@ -522,7 +521,7 @@ ClientControl:
          # This displays the health of entities and players.
          # Recommended to disable as newer versions of 5zig do not support this anymore and it is often considered
          # an unfair advantage
-         damage_indicator: true
+         damage_indicator: false
          # This shows the map from above as well as information about the locations of players and entities,
          # thus being considered as a huge advantage and recommended to disable.
          minimap_radar: true
@@ -533,15 +532,16 @@ ClientControl:
    LiteLoader:
       # Do you want to enable the LiteLoader-Control
       # This cannot be blocked; I recommend to kick if desired
-      enabled: false
+      enabled: true
       commands_on_detection:
          - "ba kick {player} gwen &4&lGWEN&c: LiteLoader"
+         - "aacstaffnotify {player} in {world} uses LiteLoader which can download worlds with WorldDownloader"
 
    # A mod that lets you display (clientside) holograms to improve building, but also has
    # a module to download worlds.
    Schematica:
       # Do you want to enable the Schematica-Control
-      enabled: false
+      enabled: true
       # This mod provides a method to disable parts of it.
       # Set the corresponding value to true if you want to block a part of the mod
       disable:
@@ -559,7 +559,7 @@ ClientControl:
    WorldDownloader:
       # Do you want to enable the WorldDownloader-Control
       # This cannot be blocked; I recommend to kick if desired
-      enabled: false
+      enabled: true
       commands_on_detection:
          - "ba kick {player} gwen &4&lGWEN&c: WorldDownloader"
 
@@ -576,7 +576,7 @@ ClientControl:
 # It activates automatically on restart and after that in a 12 hour cycle.
 LogBot:
    # Do you want to enable the LogBot
-   enabled: false
+   enabled: true
    # The time in days that should pass before an unmodified file will be deleted
    days_until_delete: 10
 
@@ -597,11 +597,9 @@ Heuristic-Addition:
 
 
 # ------------------------------------------------------------------------------------------------------------------- #
-#                                           __   __       _                                                           #
 #                                           \ \ / /__ _ _| |__  ___ ___ ___                                           #
 #                                            \ V / -_) '_| '_ \/ _ (_-</ -_)                                          #
 #                                             \_/\___|_| |_.__/\___/__/\___|                                          #
-#                                                                                                                     #
 # ------------------------------------------------------------------------------------------------------------------- #
 
 # Should players with the aac.verbose permission get the AACAdditionPro-verbose messages
